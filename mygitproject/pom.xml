@@ -35,8 +35,7 @@
 						<environment>Sandbox</environment>
 					</cloudHubDeployment>
 				</configuration>
-			</plugin>
-				</configuration>
+			
 			</plugin>
 		</plugins>
 	</build>
