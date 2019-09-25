@@ -23,7 +23,7 @@
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>3.6.2</version>
+				<version>3.3.9</version>
 				<extensions>true</extensions
 				<configuration>
 					<cloudHubDeployment>
@@ -31,7 +31,7 @@
 						<muleVersion>4.2</muleVersion>
 						<username>praveen</username>
 						<password>Ultimo2860</password>
-						<applicationName>Gitproject</applicationName>
+						<applicationName>mygitproject</applicationName>
 						<environment>Sandbox</environment>
 					</cloudHubDeployment>
 				</configuration>
