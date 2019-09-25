@@ -3,6 +3,7 @@ pipeline{
  environment {
     ANYPOINT = credentials('ANYPOINT')
  }
+stages {
  stage('Unit Test') { 
       steps {
         sh 'mvn clean test'
@@ -21,5 +22,6 @@ pipeline{
  		}
  	}
  }
+}
 
 
