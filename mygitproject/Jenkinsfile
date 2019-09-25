@@ -8,17 +8,18 @@ pipeline{
         sh 'mvn clean test'
       }
     }
-    stage('Deploy Standalone') { 
-      steps {
-        sh 'mvn deploy -P standalone'
+       stage('Deploy Standalone') { 
+           steps {
+             sh 'mvn deploy -P standalone'
       }
- 	stage ('Deploy'){
- 		steps {
- 			withMaven(maven:'maven'){
- 				sh 'mvn -f mygitproject/pom.xml package deploy  -Dusername=$ANYPOINT_USR -Dpassword=$ANYPOINT_PSW -Denvironment=Sandbox -DmuleDeploy'
- 			}
+       }
+ 	      stage ('Deploy CLOUDHUB'){
+ 		           steps {
+ 		          	
+ 				     sh 'mvn -f mygitproject/pom.xml package deploy  -Dusername=$ANYPOINT_USR -Dpassword=$ANYPOINT_PSW -Denvironment=Sandbox -DmuleDeploy'
+ 			
  		}
  	}
  }
 
-}
+
