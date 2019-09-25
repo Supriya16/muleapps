@@ -9,7 +9,7 @@ pipeline{
     
       withMaven(maven:'my_maven'){
  			
- 				sh 'mvn clean package -DskipMunitTests'
+ 				sh ''mvn -f mygitproject/pom.xml clean install'
  			
  		}
    }
