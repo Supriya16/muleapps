@@ -9,7 +9,7 @@ pipeline{
     
       withMaven(maven:'my_maven'){
  			
- 				sh ''mvn -f mygitproject/pom.xml clean install'
+ 				sh 'mvn -f mygitproject/pom.xml clean install'
  			
  		}
    }
