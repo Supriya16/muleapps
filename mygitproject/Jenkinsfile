@@ -19,7 +19,7 @@ pipeline{
    
        withMaven(maven:'my_maven'){
  			
- 			   	bat 'mvn -f mygitproject/pom.xml package deploy  -Dusername=praveen -Dpassword=Ultimo2860 -Denvironment=SANDBOX -DmuleDeploy'
+ 			   	bat 'mvn -f mygitproject/pom.xml package deploy  -Dusername=praveenD -Dpassword=Ultimo2860 -Denvironment=SANDBOX -DmuleDeploy'
  			
  		}
  	}
