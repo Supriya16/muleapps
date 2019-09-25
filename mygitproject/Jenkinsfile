@@ -7,7 +7,7 @@ pipeline{
  	stage ('Build'){
  		steps {
     
-      withMaven{
+      withMaven(maven:'maven'){
  			
  				sh 'mvn clean package -DskipMunitTests'
  			
@@ -16,7 +16,7 @@ pipeline{
  	}
  	stage ('Deploy'){
  		steps {
-    withMaven{
+    withMaven(maven:'maven'){
  			
  				sh 'mvn -f mygitproject/pom.xml package deploy  -Dusername=$ANYPOINT_USR -Dpassword=$ANYPOINT_PSW -Denvironment=Development -DmuleDeploy'
  			
