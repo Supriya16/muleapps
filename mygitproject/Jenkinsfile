@@ -3,14 +3,15 @@ pipeline{
  environment {
     ANYPOINT = credentials('ANYPOINT')
  }
- stages {
- 	stage ('Build'){
- 		steps {
- 			withMaven(maven:'maven'){
- 				sh 'mvn -f mygitproject/pom.xml clean install'
- 			}
- 		}
- 	}
+ stage('Unit Test') { 
+      steps {
+        sh 'mvn clean test'
+      }
+    }
+    stage('Deploy Standalone') { 
+      steps {
+        sh 'mvn deploy -P standalone'
+      }
  	stage ('Deploy'){
  		steps {
  			withMaven(maven:'maven'){
